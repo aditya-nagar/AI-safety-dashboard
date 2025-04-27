@@ -1,30 +1,66 @@
-# AI safety dashboard
+# AI Safety Incident Dashboard
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+This project is a frontend interface for viewing and logging hypothetical AI safety incidents. It was built as part of a take-home assignment for HumanChain.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/jatins-projects-4d047252/v0-ai-safety-dashboard)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/GtGCzstqucB)
+## Features
 
-## Overview
+- Display a list of AI safety incidents with title, severity, and reported date
+- Filter incidents by severity (All, Low, Medium, High)
+- Sort incidents by reported date (Newest First, Oldest First)
+- Expand/collapse incident details
+- Form to report new incidents with validation
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## Technology Stack
 
-## Deployment
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui
 
-Your project is live at:
+## Getting Started
 
-**[https://vercel.com/jatins-projects-4d047252/v0-ai-safety-dashboard](https://vercel.com/jatins-projects-4d047252/v0-ai-safety-dashboard)**
+### Prerequisites
 
-## Build your app
+- Node.js 18.17 or later
 
-Continue building your app on:
+### Installation
 
-**[https://v0.dev/chat/projects/GtGCzstqucB](https://v0.dev/chat/projects/GtGCzstqucB)**
+1. Clone the repository
+2. Install dependencies:
 
-## How It Works
+\`\`\`bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+\`\`\`
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+3. Run the development server:
+
+\`\`\`bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+\`\`\`
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
+
+## Design Decisions
+
+- **State Management**: Used React's useState for managing application state as it's sufficient for this scale of application.
+- **Component Structure**: Created a single-page application with all functionality in one component for simplicity, though in a real-world application, I would split this into multiple components.
+- **Styling**: Used Tailwind CSS for rapid development and consistent styling.
+- **Accessibility**: Ensured proper labeling and semantic HTML for better accessibility.
+- **Responsive Design**: The dashboard is fully responsive and works well on mobile, tablet, and desktop screens.
+
+## Future Improvements
+
+- Add pagination for large numbers of incidents
+- Implement search functionality
+- Add more detailed filtering options
+- Add unit and integration tests
+- Split into more modular components
+- Add authentication for user-specific views
